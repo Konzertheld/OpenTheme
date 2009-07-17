@@ -40,6 +40,9 @@ class opentheme extends Theme
 			case 'openruhr.de':
 				$this->assign('site',  array('header' => 'openruhr.png', 'fav' => 'openruhr.ico', 'style' => 'openruhr.css','ga' => '2','bs' => '6417'));
 				break;
+			case 'gadgetabend.de':
+				$this->assign('site',  array('header' => 'gadgetabend.png', 'fav' => 'gadgetabend.ico', 'style' => 'gadgetabend.css','ga' => '1','bs' => '6402'));
+				break;
 			default :
 				$this->assign('site',  array('header' => 'openruhr.png', 'fav' => 'openruhr.ico', 'style' => 'openruhr.css','ga' => '2','bs' => '6417'));		}
 	}

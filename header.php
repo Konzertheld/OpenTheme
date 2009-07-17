@@ -7,6 +7,7 @@
         <title><?php Options::out( 'title' ) ?><?php if($request->display_entry && isset($post)) { echo " :: {$post->title}"; } ?></title>
         <link rel="shortcut icon" href="<?php Site::out_url( 'theme' ); ?>/images/<?php echo $site['fav']; ?>" type="image/x-icon" />
         <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/stylesheets/reset.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/stylesheets/style.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/stylesheets/<?php echo $site['style']; ?>" type="text/css" media="screen" />
         <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php $theme->feed_alternate(); ?>">
         <link rel="edit" type="application/atom+xml" title="Atom Publishing Protocol" href="<?php URL::out( 'atompub_servicedocument' ); ?>">
