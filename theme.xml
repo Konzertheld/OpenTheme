@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pluggable type="theme">
+	<name>OpenTheme Custom</name>
+	<license url="">???</license>
+	
+	<author url="http://florian-fiegel.net">Florian Fiegel</author>
+	
+	<version>0.7</version>
+	<url>http://habariproject.org/</url>
+	<description><![CDATA[Special-Theme]]></description>
+
+	<copyright>2009</copyright>
+	
+	<template_engine>rawphpengine</template_engine>
+	
+</pluggable>
