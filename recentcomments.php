@@ -1,4 +1,4 @@
-        <div class="recentcomments">
+        <div id="recentcomments">
 	       <h2><?php echo $recentcomments_title; ?></h2>
 	       <ul>
 	       <?php if ($recentcomments_links) {?>

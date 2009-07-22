@@ -163,17 +163,28 @@ a {
     font-size:0.8em;
     line-height:1.5em;
 }
-.block {
-    margin-bottom:25px; 
+#sidebar div {
+    margin-bottom:35px; 
 }
-.recentcomments {
-    margin-bottom:25px; 
-}
-.recentcomments li{
+
+#sidebar div li{
     line-height:1.5em;
     border-bottom:1px dashed #ccc;
     padding:5px;
 }
+
+#sidebar div li small {
+    display:block;
+}
+#sidebar div p {
+    margin:5px;
+}
+
+li.delicious-post {
+    list-style-position:inside;
+    list-style-image:url(../images/bookmark-bullet.png);
+}
+
 #sidebar h2 {
     font-size:1.5em;
     margin-bottom:10px;

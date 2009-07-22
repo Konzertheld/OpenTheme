@@ -1,0 +1,31 @@
+a:hover {
+    color:#c40000;
+}
+
+#navigation a:hover {
+    color:#c40000;
+}
+
+.post h2 {
+    color:#c40000;
+}
+
+.post h2 a {
+    color:#c40000;
+}
+
+#content h3,h4 {
+    color:#c40000;
+}
+
+.tags a:hover {
+    background-color:#c40000;
+}
+
+#sidebar h2 {
+    color:#c40000;
+}
+
+#commentform #submit:hover {
+    background-color:#c40000;
+}
