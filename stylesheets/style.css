@@ -44,8 +44,6 @@ a {
     float:left;
     width:580px;
     border-right:1px dashed #ccc;
-    padding-bottom:20px;
-    min-height:250px;
 }
 
 /* Posting */
@@ -80,6 +78,10 @@ a {
     font-size:0.75em;
     margin:20px 0 -15px;
     text-align:center;
+}
+
+.current-page {
+    font-weight:bold;
 }
 
 .post small.date {
