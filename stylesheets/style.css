@@ -173,7 +173,18 @@ a {
     padding:20px;
     font-size:0.8em;
     line-height:1.5em;
+    border-left:1px dashed #ccc;
 }
+
+#sidebar:after {
+    content:"clear";
+    clear:left;
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+}
+
 #sidebar div {
     margin-bottom:35px; 
 }
