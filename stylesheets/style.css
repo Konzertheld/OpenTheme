@@ -99,6 +99,9 @@ a {
 .post img.right {
     float:right;
 }
+.post img.left {
+    float:right;
+}
 
 #content h3 {
     font-size:1.25em;
