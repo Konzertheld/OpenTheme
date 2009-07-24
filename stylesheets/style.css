@@ -40,7 +40,7 @@ a {
 
 /* Main */
 
-#content {
+#main {
     float:left;
     width:580px;
     border-right:1px dashed #ccc;
@@ -55,7 +55,7 @@ a {
     margin-bottom:20px;
 }
 
-#content hr {
+#main hr {
     border:0;
     border-top:1px dashed #ccc;
     width:150px;
@@ -74,6 +74,12 @@ a {
 .post p {
     text-align:justify;
     margin-bottom:1em;
+}
+
+#page-selector {
+    font-size:0.75em;
+    margin:20px 0 -15px;
+    text-align:center;
 }
 
 .post small.date {
@@ -98,17 +104,19 @@ a {
 }
 .post img.right {
     float:right;
+    margin:0 0 10px 10px;
 }
 .post img.left {
-    float:right;
+    float:left;
+    margin:0 10px 10px 0;
 }
 
-#content h3 {
+#main h3 {
     font-size:1.25em;
     margin-bottom:10px;
 }
 
-#content h4 {
+#main h4 {
     font-size:1.1em;
     margin-bottom:10px;
 }

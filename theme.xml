@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <pluggable type="theme">
-	<name>OpenTheme Custom</name>
+	<name>OpenTheme</name>
 	<license url="">???</license>
 	
 	<author url="http://florian-fiegel.net">Florian Fiegel</author>
 	
 	<version>0.7</version>
-	<url>http://habariproject.org/</url>
-	<description><![CDATA[Special-Theme]]></description>
+	<url>http://openthe.me/</url>
+	<description><![CDATA[OpenTheme is a minimalistic Theme that is usable out of the box, supports several plugins and is easy to customize.]]></description>
 
 	<copyright>2009</copyright>
 	

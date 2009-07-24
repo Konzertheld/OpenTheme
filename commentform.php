@@ -18,13 +18,13 @@ if ( ! defined('HABARI_PATH' ) ) { die( 'Please do not load this page directly. 
 				<input type="text" name="url" id="url" value="<?php if ( !$loggedin ) _e( "Website" ); else echo $commenter_url; ?>" size="30" tabindex="3" onblur="if(this.value.length == 0) this.value='<?php _e( "Website" ); ?>'" onclick="this.value='';">
 			</li>
 		
-<li><textarea name="content" id="content" cols="70%" rows="10" tabindex="4">
+<li><textarea name="content" id="content" cols="70" rows="10" tabindex="4">
 <?php if ( isset( $details['content'] ) ) { echo $details['content']; } ?>
 </textarea></li>
 <li class="submitbutton">
 			<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e( "Submit" ); ?>">
 </li>
-
+</ul>
 	</form>
 <?php else: ?> 
 <div id="nocomments">

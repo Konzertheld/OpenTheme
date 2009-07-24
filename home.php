@@ -1,6 +1,6 @@
         <?php include 'header.php'; ?>
-        <div id="main">
-            <div id="content">
+        <div id="page">
+            <div id="main">
                 <?php foreach ( $posts as $post ) { ?>
                 <div class="post">
                     <small class="date"><?php $post->pubdate->out(); ?><?php if ( $loggedin ) : ?> | <a href="<?php echo $post->editlink; ?>">EDIT</a><?php endif; ?></small>
@@ -12,6 +12,7 @@
                 </div>
                 <hr>
                 <?php } ?>
+                <div id="page-selector"><?php $theme->prev_page_link(); ?> <?php $theme->page_selector( null, array( 'leftSide' => 2, 'rightSide' => 2 ) ); ?> <?php $theme->next_page_link(); ?></div>
             </div>
             <?php include 'sidebar.php' ?>
         </div>

@@ -1,6 +1,6 @@
         <?php include 'header.php'; ?>
-        <div id="main">
-            <div id="content">
+        <div id="page">
+            <div id="main">
                 <div class="post">
                     <small class="date"><?php $post->pubdate->out(); ?><?php if ( $loggedin ) : ?> | <a href="<?php echo $post->editlink; ?>">EDIT</a><?php endif; ?></small>
                     <ul class="tags"><?php if ( is_array( $post->tags ) ) : echo $post->tags_out; endif; ?></ul>

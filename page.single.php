@@ -1,6 +1,6 @@
         <?php include 'header.php'; ?>
-        <div id="main">
-            <div id="content">
+        <div id="page">
+            <div id="main">
                 <div class="post">
                     <h2><a href="<?php echo $post->permalink; ?>"><?php echo $post->title; ?></a></h2>
                     <?php echo $post->content_out; ?>
