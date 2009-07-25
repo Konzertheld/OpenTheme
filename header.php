@@ -5,7 +5,7 @@
         <meta http-equiv="content-language" content="de-DE">
         
         <title><?php Options::out( 'title' ) ?><?php if($request->display_entry && isset($post)) { echo " :: {$post->title}"; } ?></title>
-        <link rel="shortcut icon" href="<?php Site::out_url( 'theme' ); ?>/images/<?php echo $site['fav']; ?>" type="image/x-icon">
+        <link rel="shortcut icon" href="<?php Site::out_url( 'theme' ); ?>/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/stylesheets/reset.css" type="text/css" media="screen">
         <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/stylesheets/style.css" type="text/css" media="screen">
         <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/stylesheets/default.css" type="text/css" media="screen">
