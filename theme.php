@@ -32,19 +32,6 @@ class opentheme extends Theme
 		}
 		$this->assign( 'post_id', ( isset($this->post) && $this->post->content_type == Post::type('page') ) ? $this->post->id : 0 );
 		parent::add_template_vars();
-		
-		switch ($_SERVER['SERVER_NAME']) {
-			case 'bowg.de':
-				$this->assign('site', array('header' => 'uploadparty.png', 'fav' => 'uploadparty.ico', 'style' => 'uploadparty.css','ga' => '3','bs' => '6417'));
-				break;
-			case 'openruhr.de':
-				$this->assign('site',  array('header' => 'openruhr.png', 'fav' => 'openruhr.ico', 'style' => 'openruhr.css','ga' => '2','bs' => '6417'));
-				break;
-			case 'gadgetabend.de':
-				$this->assign('site',  array('header' => 'gadgetabend.png', 'fav' => 'gadgetabend.ico', 'style' => 'gadgetabend.css','ga' => '1','bs' => '6402'));
-				break;
-			default :
-				$this->assign('site',  array('header' => 'openruhr.png', 'fav' => 'openruhr.ico', 'style' => 'openruhr.css','ga' => '2','bs' => '6417'));		}
 	}
 		
 	/**
