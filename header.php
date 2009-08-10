@@ -16,7 +16,8 @@
     </head>
     <body>
         <div id="header">
-            <h1><a href="<?php Site::out_url( 'habari' ); ?>" title="Home"><img src="<?php Site::out_url( 'theme' ); ?>/images/<?php echo $site['header']; ?>" alt="Uploadparty"></a></h1>
+            <h1><a href="<?php Site::out_url( 'habari' ); ?>" title="Home"><?php Options::out( 'title' ) ?></a></h1>
+            <span><?php Options::out( 'tagline' ) ?></span>
         </div>
         <ul id="navigation">
             <?php foreach ( $pages as $pagelink ) : ?>
