@@ -17,9 +17,14 @@ a {
 /* Header */
 
 #header {
-    text-align:center;
+    text-align:left;
     margin:0;
 }
+
+#header h1 {
+    font-size: 3em;
+}
+
 
 /* Navigation */
 
