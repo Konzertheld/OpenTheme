@@ -25,6 +25,10 @@ a {
     font-size: 3em;
 }
 
+#header span {
+    font-size: 2em;
+}
+
 
 /* Navigation */
 
@@ -219,7 +223,7 @@ li.delicious-post {
     margin-bottom:10px;
 }
 
-#commentform #content {
+#commentform #comment_content {
     width: 500px;
     border:1px dotted #ccc;
     font-family: 'myriad pro', helvetica, arial;
@@ -228,11 +232,12 @@ li.delicious-post {
     padding:10px;
     margin:5px 0 5px 0;
 }
-#commentform #submit {
+
+#commentform #submit input {
     background-color:#fff;
     padding:5px 10px;
 }
-#commentform #submit:hover {
+#commentform #submit input:hover {
     color:#fff;
 }
 
