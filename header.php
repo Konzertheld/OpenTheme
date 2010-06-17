@@ -16,7 +16,7 @@
     </head>
     <body>
         <div id="header">
-            <h1><a href="<?php Site::out_url( 'habari' ); ?>" title="Home"><img src="<?php Site::out_url( 'theme' ); ?>/images/header.png" alt="HabariMag"></a></h1>
+            <h1><a href="<?php Site::out_url( 'habari' ); ?>" title="Home"><img src="<?php Site::out_url( 'habari' ); ?>/user/files/images/header.png" alt="<?php Options::out( 'title' ) ?>"></a></h1>
             <span><?php Options::out( 'tagline' ) ?></span>
         </div>
         <ul id="navigation">
