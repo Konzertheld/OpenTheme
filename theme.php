@@ -8,6 +8,7 @@ class opentheme extends Theme
 	{
 		// Apply Format::autop() to post content...
 		Format::apply( 'autop', 'post_content_out' );
+		Format::apply( 'autop', 'post_content_excerpt' );
 		// Apply Format::autop() to comment content...
 		Format::apply( 'autop', 'comment_content_out' );
 		// Truncate content excerpt at "more" …
