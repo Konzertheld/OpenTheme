@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <pluggable type="theme">
 	<name>OpenTheme</name>
+	<class>opentheme</class>
 	<license url="">???</license>
 	
-	<author url="http://florian-fiegel.net">Florian Fiegel</author>
+	<author url="http://habarimag.de">HabariMag-Team</author>
 	
-	<version>0.1</version>
-	<url>http://openthe.me/</url>
+	<version>0.2</version>
+	<url>https://github.com/HabariMag/OpenTheme</url>
 	<description><![CDATA[OpenTheme is a minimalistic Theme that is usable out of the box, supports several plugins and is easy to customize. Refer to the URL t get more informations.]]></description>
 
-	<copyright>2009</copyright>
+	<copyright>2011</copyright>
 	
 	<template_engine>rawphpengine</template_engine>
+	
+	<areas>
+		<area name="sidebar">
+			<description><![CDATA[The sidebar area]]></description>
+		</area>
+		<area name="nav">
+			<description><![CDATA[The sidebar area]]></description>
+		</area>
+	</areas>
 	
 </pluggable>

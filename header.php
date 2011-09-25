@@ -20,7 +20,5 @@
             <span><?php Options::out( 'tagline' ) ?></span>
         </div>
         <ul id="navigation">
-            <?php foreach ( $pages as $pagelink ) : ?>
-            <li><a href="<?php echo $pagelink->permalink; ?>" title="<?php echo $pagelink->title; ?>"><?php echo $pagelink->title; ?></a></li>
-            <?php endforeach; ?>
+            <?php $theme->area('nav'); ?>
         </ul>
