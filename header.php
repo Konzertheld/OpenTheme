@@ -16,7 +16,11 @@
     </head>
     <body>
         <div id="header">
-            <h1><a href="<?php Site::out_url( 'habari' ); ?>" title="Home"><img src="<?php Site::out_url( 'habari' ); ?>/user/files/images/header.png" alt="<?php Options::out( 'title' ) ?>"></a></h1>
+            <?php if ( $show_title_image ) : ?>
+				<h1><a href="<?php Site::out_url( 'habari' ); ?>"><img src="<?php echo $title_image_url; ?>" alt="<?php Options::out( 'title' ); ?>" ></a><span class="hidden"><?php Options::out( 'title' ); ?></span></h1>
+			<?php else : ?>
+				<h1><a href="<?php Site::out_url( 'habari' ); ?>"><?php Options::out( 'title' ); ?></a></h1>
+			<?php endif; ?>
             <span><?php Options::out( 'tagline' ) ?></span>
         </div>
         <ul id="navigation">

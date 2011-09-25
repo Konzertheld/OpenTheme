@@ -257,3 +257,7 @@ li.delicious-post {
     text-align:center;
     font-size:0.75em;
 }
+
+.hidden {
+	display: none
+}

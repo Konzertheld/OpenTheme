@@ -4,6 +4,41 @@ define( 'THEME_CLASS', 'opentheme' );
 
 class opentheme extends Theme
 {	
+	
+	var $defaults = array(
+		'show_title_image' => false,
+		'title_image_url' => '/user/files/images/header.png'
+		);
+	
+	/**
+	 * On theme activation, set the default options and activate a default menu*/
+	 
+	public function action_theme_activated()
+	{
+		$opts = Options::get_group( __CLASS__ );
+		if ( empty( $opts ) ) {
+			Options::set_group( __CLASS__, $this->defaults );
+		}
+
+	}
+	
+	/**
+	 * Configuration form for the Charcoal theme
+	 **/
+	public function action_theme_ui( $theme )
+	{
+		$ui = new FormUI( __CLASS__ );
+		// This is a fudge as I only need to add a little bit of styling to make things look nice.
+		$ui->append( 'checkbox', 'show_title_image', __CLASS__.'__show_title_image', _t( 'Show Title Image:'), 'optionscontrol_checkbox' );
+			$ui->show_title_image->helptext = _t( 'Check to show the title image, uncheck to display the title text.' );
+		$ui->append( 'text', 'title_image_url', __CLASS__.'__title_image_url', _t( 'Title Image URL:' ), 'optionscontrol_text' );
+			$ui->title_image_url->helptext = _t( 'Set URL for title image.' );
+		// Save
+		$ui->append( 'submit', 'save', _t( 'Save' ) );
+		$ui->set_option( 'success_message', _t( 'Options saved' ) );
+		$ui->out();
+	}
+	
 		public function action_init_theme()
 	{
 		// Apply Format::autop() to post content...
@@ -18,8 +53,14 @@ class opentheme extends Theme
 	/**
 	 * Add some variables to the template output
 	 */
-	public function add_template_vars()
+	public function action_add_template_vars( $theme, $handler_vars )
 	{
+		// Use theme options to set values that can be used directly in the templates
+		$opts = Options::get_group( __CLASS__ );
+				
+		$this->assign( 'show_title_image', $opts['show_title_image'] );
+		$this->assign( 'title_image_url', $opts['title_image_url'] );
+		
 		$locale =Options::get( 'locale' );
 		if ( file_exists( Site::get_dir( 'theme', true ). $locale . '.css' ) ){
 			$this->assign( 'localized_css',  $locale . '.css' );
@@ -32,7 +73,6 @@ class opentheme extends Theme
 			$this->assign('pages', Posts::get( array( 'content_type' => 'page', 'status' => Post::status('published'), 'nolimit' => 1 ) ) );
 		}
 		$this->assign( 'post_id', ( isset($this->post) && $this->post->content_type == Post::type('page') ) ? $this->post->id : 0 );
-		parent::add_template_vars();
 	}
 		
 	/**
@@ -95,35 +135,5 @@ class opentheme extends Theme
 
 	}
 	
-	public function theme_search_form( $theme )
-	{
-		return $theme->fetch('searchform');
-	}
-	
-	/**
-	 * Returns an unordered list of all used Tags
-	 */
-	public function theme_show_tags ( $theme )
-	{
-		$limit = self::TAGS_COUNT;
-		$sql ="
-			SELECT t.tag_slug AS slug, t.tag_text AS text, count(tp.post_id) as ttl
-			FROM {tags} t
-			INNER JOIN {tag2post} tp
-			ON t.id=tp.tag_id
-			INNER JOIN {posts} p
-			ON p.id=tp.post_id AND p.status = ?
-			GROUP BY t.tag_slug
-			ORDER BY t.tag_text
-			LIMIT {$limit}
-		";
-		$tags = DB::get_results( $sql, array(Post::status('published')) );
-		foreach ($tags as $index => $tag) {
-			$tags[$index]->url = URL::get( 'display_entries_by_tag', array( 'tag' => $tag->slug ) );
-		}
-		$theme->taglist = $tags;
-		
-		return $theme->fetch( 'taglist' );
-	}
 }
 ?>
