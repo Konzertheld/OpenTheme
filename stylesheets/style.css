@@ -224,22 +224,15 @@ li.delicious-post {
 }
 
 #commentform #comment_content {
-    width: 500px;
+    width: 355px;
     border:1px dotted #ccc;
     font-family: 'myriad pro', helvetica, arial;
     line-height:1.5em;
     font-size:1em;
-    padding:10px;
+    padding:5px;
     margin:5px 0 5px 0;
 }
 
-#commentform #submit input {
-    background-color:#fff;
-    padding:5px 10px;
-}
-#commentform #submit input:hover {
-    color:#fff;
-}
 
 #commentform input {
     padding:5px;
@@ -247,6 +240,26 @@ li.delicious-post {
     font-size:1em;
     line-height:1.5em;
     margin:5px 0 5px 0;
+	width:355px;
+	display:block;
+	float:right;
+}
+
+#commentform label {
+	display:block;
+	float:left;
+	width:170px;
+	margin:14px 2px 5px 0;
+}
+
+#commentform #cf_submit input {
+    background-color:#fff;
+    padding:5px 10px;
+	width:367px;
+}
+
+#commentform #cf_submit input:hover {
+    color:#fff;
 }
 /* Footer */
 
