@@ -93,7 +93,7 @@ a {
     font-weight:bold;
 }
 
-.post small.date {
+.post small.meta {
     display:block;
     margin-bottom:15px;
     text-align:right;
