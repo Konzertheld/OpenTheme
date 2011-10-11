@@ -7,6 +7,7 @@ class opentheme extends Theme
 	
 	var $defaults = array(
 		'show_title_image' => false,
+		'show_post_author' => false,
 		'title_image_url' => '/user/files/images/header.png'
 		);
 	
@@ -31,6 +32,8 @@ class opentheme extends Theme
 		// This is a fudge as I only need to add a little bit of styling to make things look nice.
 		$ui->append( 'checkbox', 'show_title_image', __CLASS__.'__show_title_image', _t( 'Show Title Image:'), 'optionscontrol_checkbox' );
 			$ui->show_title_image->helptext = _t( 'Check to show the title image, uncheck to display the title text.' );
+		$ui->append( 'checkbox', 'show_post_author', __CLASS__.'__show_post_author', _t( 'Show Post Author:'), 'optionscontrol_checkbox' );
+				$ui->show_post_author->helptext = _t( 'Check to show the posts author, uncheck to hide author.' );
 		$ui->append( 'text', 'title_image_url', __CLASS__.'__title_image_url', _t( 'Title Image URL:' ), 'optionscontrol_text' );
 			$ui->title_image_url->helptext = _t( 'Set URL for title image.' );
 		// Save
@@ -57,6 +60,7 @@ class opentheme extends Theme
 		$opts = Options::get_group( __CLASS__ );
 				
 		$this->assign( 'show_title_image', $opts['show_title_image'] );
+		$this->assign( 'show_post_author', $opts['show_post_author'] );
 		$this->assign( 'title_image_url', $opts['title_image_url'] );
 		
 		$locale =Options::get( 'locale' );
