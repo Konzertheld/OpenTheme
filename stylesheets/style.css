@@ -239,7 +239,7 @@ li.delicious-post {
     border:1px dotted #ccc;
     font-size:1em;
     line-height:1.5em;
-    margin:5px 0 5px 0;
+    margin:5px 20px 5px 0;
 	width:355px;
 	display:block;
 	float:right;
@@ -273,4 +273,13 @@ li.delicious-post {
 
 .hidden {
 	display: none
+}
+
+.gravatar {
+	float:left;
+	margin: 0 10px 0 0;
+}
+
+.comment-meta {
+	margin-bottom:10px;
 }

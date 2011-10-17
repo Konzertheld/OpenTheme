@@ -4,7 +4,8 @@
 			<ol class="commentlist">
 		        <?php foreach ( $post->comments->moderated as $comment ) : ?>
 				<li id="comment-<?php echo $comment->id; ?>">
-			    <small><a href="<?php echo $comment->url; ?>" rel="external" class="url"><?php echo $comment->name; ?></a> am <?php $comment->date->out(); ?></small>
+					<?php if ( Plugins::is_loaded('Gravatar') ) : ?><img src="<?php echo $comment->gravatar; ?>" class="gravatar" /><?php endif; ?>
+			    <p class="comment-meta"><a href="<?php echo $comment->url; ?>" rel="external" class="url"><?php echo $comment->name; ?></a><br /><?php $comment->date->out(); ?></p>
 			<?php echo $comment->content_out; ?>
 			<?php if ( $comment->status == Comment::STATUS_UNAPPROVED ) : ?>
 			<p><?php _e( 'Your comment is awaiting moderation' ) ;?></p>
