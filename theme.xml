@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <pluggable type="theme">
 	<name>OpenTheme</name>
-	<class>opentheme</class>
 	<license url="">???</license>
 	
 	<author url="http://habarimag.de">HabariMag-Team</author>
@@ -22,5 +21,5 @@
 			<description><![CDATA[The sidebar area]]></description>
 		</area>
 	</areas>
-	
+	<guid>e042e3b9-1a75-47f4-b19a-d0736e6db2ed</guid>
 </pluggable>
